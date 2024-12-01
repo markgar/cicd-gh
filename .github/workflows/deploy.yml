@@ -26,14 +26,17 @@ jobs:
       - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
-      - name: Run the deploy script
+      - name: Install Prerequisites
         shell: pwsh
         run: |
           Install-Module Az -Force
           Import-Module Az.Accounts -Force
           Install-Module FabricPS -Force
           Import-Module FabricPS -Force
-          
+
+      - name: Connect with SPN
+        shell: pwsh
+        run: |
           # Define Service Principal credentials
           $clientId = '${{ secrets.client_id }}'                   # Replace with your SP's Application (Client) ID
           $tenantId = '${{ secrets.tenant_id }}'                   # Replace with your Azure Tenant ID
@@ -48,8 +51,8 @@ jobs:
           # Connect to Azure using the Service Principal
           Connect-AzAccount -ServicePrincipal -Credential $credential -TenantId $tenantId
 
+      - name: Deploy some stuff
+        shell: pwsh
+        run: |
           New-Notebook -WorkspaceId 'd387d230-e3d9-4378-8870-2130884c2e91' `
-                    -DisplayName 'New Notebook6' 
-
-
-
+                    -DisplayName 'New Notebook7' 
