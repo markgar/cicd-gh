@@ -29,6 +29,7 @@ jobs:
       - name: Run the deploy script
         shell: pwsh
         run: |
+          Import-Module Az.Accounts
           Install-Module FabricPS -Force
           Import-Module FabricPS -Force
           # Define Service Principal credentials
