@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         shell: pwsh
-        run: Import-Module ".\FabricPS" -Force
+        run: Import-Module FabricPS -Force
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
