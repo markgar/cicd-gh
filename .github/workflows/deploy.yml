@@ -23,7 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - uses:N actions/checkout@v4
 
       # Runs a single command using the runners shell
       - name: Run the deploy script
@@ -47,5 +47,9 @@ jobs:
           
           # Connect to Azure using the Service Principal
           Connect-AzAccount -ServicePrincipal -Credential $credential -TenantId $tenantId
+
+          New-Notebook -WorkspaceId 'd387d230-e3d9-4378-8870-2130884c2e91' `
+                    -DisplayName 'New Notebook6' 
+
 
 
