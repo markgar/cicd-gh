@@ -29,12 +29,12 @@ jobs:
       - name: Run the deploy script
         shell: pwsh
         run: |
-          Install-Module Az
-          Import-Module Az.Accounts
+          Install-Module Az -Force
+          Import-Module Az.Accounts -Force
           Install-Module FabricPS -Force
           Import-Module FabricPS -Force
-          # Define Service Principal credentials
           
+          # Define Service Principal credentials
           $clientId = '${{ secrets.client_id }}'                   # Replace with your SP's Application (Client) ID
           $tenantId = '${{ secrets.tenant_id }}'                   # Replace with your Azure Tenant ID
           $clientSecret = '${{ secrets.client_secret }}'          # Replace with your SP's Client Secret
