@@ -2,7 +2,7 @@
 $notebookDirs = Get-ChildItem -Directory | Where-Object { $_.Name -like '*.Notebook' }
 
 # hard coded workspace id for now
-$destinationWorkspaceId = '5ccc33a8-cd6a-4168-98c4-9e8cd70bbace'
+$destinationWorkspaceId = 'f4a80368-71ee-4e0f-8734-1e3c32e28d2a'
 
 # Get all the notebooks in the destination workspace
 $notebooks = Get-Notebooks -WorkspaceId $destinationWorkspaceId
