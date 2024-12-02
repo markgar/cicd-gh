@@ -6,7 +6,7 @@ This does not use a workspace as a source for deploying like a Fabric Pipeline d
 # FabricPS
 This code relies on a powershell module called FabricPS, also written by Mark Garner.
 
-FabricPS takes the Fabric Rest API calls and makes them easier to use by making simple Powershell functions and packating them into a Module on Powershell Gallery.  You can install this by executing '''Install-Module FabricPS'''
+FabricPS takes the Fabric Rest API calls and makes them easier to use by making simple Powershell functions and packating them into a Module on Powershell Gallery.  You can install this by executing ```Install-Module FabricPS```
 
 # Process
 New code is introduced by a feature branch and a feature workspace.  Create a new workspace in Fabric and create a feature branch in the Fabric UI.  When coding is complete in the Fabric UI, create a pull request and merge it.  This will move the new code to the main branch.  You can now delete the feature branch and the feature workspace.
