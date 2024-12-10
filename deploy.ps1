@@ -49,7 +49,8 @@ function Deploy-FabricItems {
     }
 }
 
-Import FabricPS -Force
+Install-Module FabricPS -Force
+Import-Module FabricPS -Force
 
 # hard coded workspace id for now
 $destinationWorkspaceId = 'f4a80368-71ee-4e0f-8734-1e3c32e28d2a'
