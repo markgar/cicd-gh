@@ -32,8 +32,6 @@ jobs:
         run: |
           Install-Module Az -Force
           Import-Module Az.Accounts -Force
-          Install-Module FabricPS -Force
-          Import-Module FabricPS -Force
 
       - name: Connect with SPN
         shell: pwsh
