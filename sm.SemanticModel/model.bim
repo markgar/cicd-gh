@@ -49,7 +49,7 @@
         ],
         "expression": [
           "let",
-          "    database = Sql.Database(\"K2ISRBW3V5AEJGY2HWDWJXTJ4E-2MT7QR63OANUDBJPTRK5DVN76A.datawarehouse.fabric.microsoft.com\", \"c93fecd6-bb3c-4bce-905e-cf017e1a6768\")",
+          "    database = Sql.Database(\"k2isrbw3v5aejgy2hwdwjxtj4e-ad6yb6jdsvheboc6fwurilj23i.datawarehouse.fabric.microsoft.com\", \"ced12c6e-7a91-4dbb-9be1-5f63b6758dea\")",
           "in",
           "    database"
         ],
