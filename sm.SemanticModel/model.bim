@@ -13,6 +13,10 @@
       {
         "name": "PBI_QueryOrder",
         "value": "[\"DatabaseQuery\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"WebModelingEdit\"]"
       }
     ],
     "collation": "Latin1_General_100_BIN2_UTF8",
@@ -114,6 +118,14 @@
           }
         ],
         "lineageTag": "cad15566-898e-4d40-8a76-7f90bcbabdfb",
+        "measures": [
+          {
+            "name": "Measure",
+            "expression": "sum([a])",
+            "formatString": "0",
+            "lineageTag": "7daede19-eb34-48ea-90ca-387d18e24619"
+          }
+        ],
         "partitions": [
           {
             "name": "abc123",
