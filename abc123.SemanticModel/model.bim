@@ -45,6 +45,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -89,6 +93,19 @@
             "lineageTag": "77ba5a5a-f96a-4af4-bb89-e83cf7a07522",
             "sourceColumn": "c",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "Custom",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "99501d05-8544-43e4-b5e5-e6b29975e180",
+            "sourceColumn": "Custom",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "64f4df85-6866-41db-a40e-d9275df33abc",
@@ -100,9 +117,10 @@
               "expression": [
                 "let",
                 "    Source = Sql.Database(\"k2isrbw3v5aejgy2hwdwjxtj4e-2mt7qr63oanudbjptrk5dvn76a.datawarehouse.fabric.microsoft.com\", \"lh\"),",
-                "    dbo_abc123 = Source{[Schema=\"dbo\",Item=\"abc123\"]}[Data]",
+                "    dbo_abc123 = Source{[Schema=\"dbo\",Item=\"abc123\"]}[Data],",
+                "    #\"Added Custom\" = Table.AddColumn(dbo_abc123, \"Custom\", each [a])",
                 "in",
-                "    dbo_abc123"
+                "    #\"Added Custom\""
               ],
               "type": "m"
             }
