@@ -1,0 +1,114 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"abc123\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.139.505.0 (24.12)+f14217bb5dd068a73b4ed97c223c3e65c3a8f5a3"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "abc123",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "a",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "574e832a-6b7e-4c09-bb45-407600789af0",
+            "sourceColumn": "a",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "b",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "883e683b-2a91-4caf-854b-8ab6bec03702",
+            "sourceColumn": "b",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "c",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "77ba5a5a-f96a-4af4-bb89-e83cf7a07522",
+            "sourceColumn": "c",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "64f4df85-6866-41db-a40e-d9275df33abc",
+        "partitions": [
+          {
+            "name": "abc123",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"k2isrbw3v5aejgy2hwdwjxtj4e-2mt7qr63oanudbjptrk5dvn76a.datawarehouse.fabric.microsoft.com\", \"lh\"),",
+                "    dbo_abc123 = Source{[Schema=\"dbo\",Item=\"abc123\"]}[Data]",
+                "in",
+                "    dbo_abc123"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
